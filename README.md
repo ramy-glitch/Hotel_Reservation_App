@@ -8,6 +8,8 @@ Description of the Web App:
 
 A/ The Actors of the system:
 
+
+
 1.User(client): 
 
 Register and log in.
@@ -22,6 +24,8 @@ Receive notifications about reservations.
 
 Leave reviews for hotels.
 
+
+
 2.Hotel(s) manager: 
 
 Log in to the system.
@@ -29,6 +33,8 @@ Log in to the system.
 Manage room details (add, update, delete rooms).
 
 View and manage reservations for their hotel(s).
+
+
 
 3.Admin: 
 
@@ -39,6 +45,8 @@ Manage user accounts (create, update, delete).
 Manage hotel manager accounts (assign to hotels, create, update, delete).
 
 Oversee system data and logs for maintenance and security.( overAll statistics )
+
+
 
 
 B/ The services implemented in this web app:
