@@ -19,7 +19,7 @@ A/ The Actors of the system:
 B/ The services implemented in this web app:
 
  
-1. user registration and authentification : ( google account registration ) 
+1. user registration and authentification . 
 
 2. search and filter hotels :
 
