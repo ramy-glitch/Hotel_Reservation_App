@@ -12,39 +12,39 @@ A/ The Actors of the system:
 
 1.User(client): 
 
-Register and log in.
+a.Register and log in.
 
-Search and filter hotels.(this is common between the website visitor and the user)
+b.Search and filter hotels.(this is common between the website visitor and the user)
 
-View hotel details.(this is common between the website visitor and the user)
+c.View hotel details.(this is common between the website visitor and the user)
 
-Make a reservation.
+d.Make a reservation.
 
-Receive notifications about reservations.
+e.Receive notifications about reservations.
 
-Leave reviews for hotels.
+f.Leave reviews for hotels.
 
 
 
 2.Hotel(s) manager: 
 
-Log in to the system.
+a.Log in to the system.
 
-Manage room details (add, update, delete rooms).
+b.Manage room details (add, update, delete rooms).
 
-View and manage reservations for their hotel(s).
+c.View and manage reservations for their hotel(s).
 
 
 
 3.Admin: 
 
-Log in to the system.
+a.Log in to the system.
 
-Manage user accounts (create, update, delete).
+b.Manage user accounts (create, update, delete).
 
-Manage hotel manager accounts (assign to hotels, create, update, delete).
+c.Manage hotel manager accounts (assign to hotels, create, update, delete).
 
-Oversee system data and logs for maintenance and security.( overAll statistics )
+d.Oversee system data and logs for maintenance and security.( overAll statistics )
 
 
 
