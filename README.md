@@ -34,6 +34,8 @@ b.Manage room details (add, update, delete rooms).
 
 c.View and manage reservations for their hotel(s).
 
+d.Manage their hotel(s) details.
+
 
 
 3.Admin: 
