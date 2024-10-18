@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Manager Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#reservations">Reservations</a></li>
+                <li><a href="#hotels">Hotels</a></li>
+                <li><a href="#rooms">Rooms</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#stats">Statistics</a></li>
+                <li><a href="#account">Account Info</a></li>
+                <li><a href="#logout">Logout</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main content -->
+        <div class="main-content">
+            <header class="main-header">
+                <h1>Hotel Manager Dashboard</h1>
+                <div class="user-info">
+                    <p>Logged in as <span>Manager Name</span></p>
+                </div>
+            </header>
+
+            <!-- Reservations List -->
+            <section id="reservations" class="section">
+                <h2>Recent Reservations</h2>
+                <table class="responsive-table">
+                    <thead>
+                        <tr>
+                            <th>Reservation ID</th>
+                            <th>Guest Name</th>
+                            <th>Room</th>
+                            <th>Date</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#001</td>
+                            <td>John Doe</td>
+                            <td>Room 101</td>
+                            <td>2024-10-18</td>
+                            <td>
+                                <button class="btn-cancel">Cancel</button>
+                            </td>
+                        </tr>
+                        <!-- Additional rows -->
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Hotel List Section -->
+            <section id="hotels" class="section">
+                <h2>Your Hotels</h2>
+                <div class="search-create">
+                    <input type="text" placeholder="Search hotels...">
+                    <button class="btn-create">Create New Hotel</button>
+                </div>
+                <table class="responsive-table">
+                    <thead>
+                        <tr>
+                            <th>Hotel Name</th>
+                            <th>Location</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Grand Hotel</td>
+                            <td>Paris, France</td>
+                            <td>
+                                <button class="btn-edit">Edit</button>
+                                <button class="btn-delete">Delete</button>
+                            </td>
+                        </tr>
+                        <!-- Additional rows -->
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Additional Sections (Rooms, Services, etc.) -->
+
+        </div> <!-- End of main content -->
+    </div> <!-- End of container -->
+</body>
+</html>
