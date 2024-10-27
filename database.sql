@@ -1,125 +1,146 @@
-CREATE TABLE admin (
-    adminID INTEGER NOT NULL AUTO_INCREMENT,
+CREATE TABLE admins (
+    id INTEGER NOT NULL AUTO_INCREMENT,
     username VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL,
     password VARCHAR(255) NOT NULL,
-    PRIMARY KEY (adminID),
+    created_at TIMESTAMP NULL DEFAULT NULL,
+    updated_at TIMESTAMP NULL DEFAULT NULL,
+    PRIMARY KEY (id),
     CONSTRAINT unique_username UNIQUE (username),
     CONSTRAINT unique_email UNIQUE (email)
 );
 
-CREATE TABLE hotelmanager (
-    managerID INTEGER NOT NULL AUTO_INCREMENT,
+CREATE TABLE hotel_managers (
+    id INTEGER NOT NULL AUTO_INCREMENT,
     username VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL,
     password VARCHAR(255) NOT NULL,
-    PRIMARY KEY (managerID),
+    created_at TIMESTAMP NULL DEFAULT NULL,
+    updated_at TIMESTAMP NULL DEFAULT NULL,
+    PRIMARY KEY (id),
     CONSTRAINT unique_username UNIQUE (username),
     CONSTRAINT unique_email UNIQUE (email)
 );
 
-CREATE TABLE user (
-    userID INTEGER NOT NULL AUTO_INCREMENT,
+CREATE TABLE users (
+    id INTEGER NOT NULL AUTO_INCREMENT,
     username VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL,
     password VARCHAR(255) NOT NULL,
-    PRIMARY KEY (userID),
+    birth_date DATE NOT NULL,
+    created_at TIMESTAMP NULL DEFAULT NULL,
+    updated_at TIMESTAMP NULL DEFAULT NULL,
+    PRIMARY KEY (id),
     CONSTRAINT unique_username UNIQUE (username),
     CONSTRAINT unique_email UNIQUE (email)
 );
 
-CREATE TABLE service (
-    serviceID INTEGER NOT NULL AUTO_INCREMENT,
+CREATE TABLE services (
+    id INTEGER NOT NULL AUTO_INCREMENT,
     servicename VARCHAR(255) NOT NULL,
     description TEXT,
     availability BOOLEAN NOT NULL,
     cost DOUBLE,
-    PRIMARY KEY (serviceID)
+    created_at TIMESTAMP NULL DEFAULT NULL,
+    updated_at TIMESTAMP NULL DEFAULT NULL,
+    PRIMARY KEY (id)
 );
 
-CREATE TABLE hotel (
-    hotelID INTEGER NOT NULL AUTO_INCREMENT,
+CREATE TABLE hotels (
+    id INTEGER NOT NULL AUTO_INCREMENT,
     hotelname VARCHAR(255) NOT NULL,
     location VARCHAR(255) NOT NULL,
-    managerID INTEGER,
-    PRIMARY KEY (hotelID),
-    FOREIGN KEY (managerID) REFERENCES hotelmanager(managerID)
+    manager_id INTEGER,
+    created_at TIMESTAMP NULL DEFAULT NULL,
+    updated_at TIMESTAMP NULL DEFAULT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (manager_id) REFERENCES hotel_managers(id)
 );
 
-CREATE TABLE room (
-    roomID INTEGER NOT NULL AUTO_INCREMENT,
-    roomNumber VARCHAR(255) NOT NULL,
-    roomType VARCHAR(255) NOT NULL,
+CREATE TABLE rooms (
+    id INTEGER NOT NULL AUTO_INCREMENT,
+    room_number VARCHAR(255) NOT NULL,
+    room_type VARCHAR(255) NOT NULL,
     capacity INTEGER NOT NULL,
     price DOUBLE NOT NULL,
     availability BOOLEAN NOT NULL,
-    hotelID INTEGER,
-    PRIMARY KEY (roomID),
-    FOREIGN KEY (hotelID) REFERENCES hotel(hotelID)
+    hotel_id INTEGER,
+    created_at TIMESTAMP NULL DEFAULT NULL,
+    updated_at TIMESTAMP NULL DEFAULT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (hotel_id) REFERENCES hotels(id)
 );
 
-CREATE TABLE review (
-    reviewID INTEGER NOT NULL AUTO_INCREMENT,
+CREATE TABLE reviews (
+    id INTEGER NOT NULL AUTO_INCREMENT,
     rating INTEGER NOT NULL,
-    reviewcomment TEXT,
-    userID INTEGER,
-    hotelID INTEGER,
-    PRIMARY KEY (reviewID),
-    FOREIGN KEY (userID) REFERENCES user(userID),
-    FOREIGN KEY (hotelID) REFERENCES hotel(hotelID)
+    review_comment TEXT,
+    user_id INTEGER,
+    hotel_id INTEGER,
+    created_at TIMESTAMP NULL DEFAULT NULL,
+    updated_at TIMESTAMP NULL DEFAULT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (user_id) REFERENCES users(id),
+    FOREIGN KEY (hotel_id) REFERENCES hotels(id)
 );
 
-CREATE TABLE notification (
-    notificationID INTEGER NOT NULL AUTO_INCREMENT,
+CREATE TABLE notifications (
+    id INTEGER NOT NULL AUTO_INCREMENT,
     message TEXT NOT NULL,
-    notificationdate DATE NOT NULL,
-    userID INTEGER,
-    PRIMARY KEY (notificationID),
-    FOREIGN KEY (userID) REFERENCES user(userID)
+    user_id INTEGER,
+    created_at TIMESTAMP NULL DEFAULT NULL,
+    updated_at TIMESTAMP NULL DEFAULT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (user_id) REFERENCES users(id)
 );
 
-CREATE TABLE reservation (
-    reservationID INTEGER NOT NULL AUTO_INCREMENT,
-    reservationDate DATE NOT NULL,
-    checkInDate DATE NOT NULL,
-    checkOutDate DATE NOT NULL,
-    userID INTEGER,
-    hotelID INTEGER,
+CREATE TABLE reservations (
+    id INTEGER NOT NULL AUTO_INCREMENT,
+    check_in_date DATE NOT NULL,
+    check_out_date DATE NOT NULL,
+    user_id INTEGER,
+    hotel_id INTEGER,
     status VARCHAR(255) NOT NULL,
-    numberOfPeople INTEGER NOT NULL,
-    PRIMARY KEY (reservationID),
-    FOREIGN KEY (userID) REFERENCES user(userID),
-    FOREIGN KEY (hotelID) REFERENCES hotel(hotelID)
+    number_of_people INTEGER NOT NULL,
+    created_at TIMESTAMP NULL DEFAULT NULL,
+    updated_at TIMESTAMP NULL DEFAULT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (user_id) REFERENCES users(id),
+    FOREIGN KEY (hotel_id) REFERENCES hotels(id)
 );
 
 CREATE TABLE reservation_rooms (
-    reservationID INTEGER,
-    roomID INTEGER,
-    PRIMARY KEY (reservationID, roomID),
-    FOREIGN KEY (reservationID) REFERENCES reservation(reservationID),
-    FOREIGN KEY (roomID) REFERENCES room(roomID)
+    reservation_id INTEGER,
+    room_id INTEGER,
+    PRIMARY KEY (reservation_id, room_id),
+    FOREIGN KEY (reservation_id) REFERENCES reservations(id),
+    FOREIGN KEY (room_id) REFERENCES rooms(id)
 );
 
 CREATE TABLE hotel_photos (
-    photoID INTEGER NOT NULL AUTO_INCREMENT,
-    photoURL TEXT NOT NULL,
-    hotelID INTEGER,
-    PRIMARY KEY (photoID),
-    FOREIGN KEY (hotelID) REFERENCES hotel(hotelID)
+    id INTEGER NOT NULL AUTO_INCREMENT,
+    photo_url TEXT NOT NULL,
+    hotel_id INTEGER,
+    created_at TIMESTAMP NULL DEFAULT NULL,
+    updated_at TIMESTAMP NULL DEFAULT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (hotel_id) REFERENCES hotels(id)
 );
 
 CREATE TABLE room_photos (
-    photoID INTEGER NOT NULL AUTO_INCREMENT,
-    photoURL TEXT NOT NULL,
-    roomID INTEGER,
-    PRIMARY KEY (photoID),
-    FOREIGN KEY (roomID) REFERENCES room(roomID)
+    id INTEGER NOT NULL AUTO_INCREMENT,
+    photo_url TEXT NOT NULL,
+    room_id INTEGER,
+    created_at TIMESTAMP NULL DEFAULT NULL,
+    updated_at TIMESTAMP NULL DEFAULT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (room_id) REFERENCES rooms(id)
 );
 
 CREATE TABLE hotel_services (
-    hotelID INTEGER,
-    serviceID INTEGER,
-    PRIMARY KEY (hotelID, serviceID),
-    FOREIGN KEY (hotelID) REFERENCES hotel(hotelID),
-    FOREIGN KEY (serviceID) REFERENCES service(serviceID)
+    hotel_id INTEGER,
+    service_id INTEGER,
+    PRIMARY KEY (hotel_id, service_id),
+    FOREIGN KEY (hotel_id) REFERENCES hotels(id),
+    FOREIGN KEY (service_id) REFERENCES services(id)
 );
