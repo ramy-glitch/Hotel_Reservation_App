@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users Management</title>
+    <link rel="stylesheet" href="admin-style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2 class="sidebar-logo">Admin Dashboard</h2>
+            <ul class="sidebar-menu">
+                <li><a href="#user-management" class="nav-link active">Users Management</a></li>
+                <li><a href="hotels-management.html" class="nav-link">Hotels Management</a></li>
+                <li><a href="statistics.html" class="nav-link">Statistics</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content for Users Management -->
+        <main class="main-content">
+            <!-- Users Management Section -->
+            <section id="user-management" class="section active">
+                <h3>Users Management</h3>
+                
+                
+                <!-- Users Table -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>User ID</th>
+                            <th>Username</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>JohnDoe</td>
+                            <td>johndoe@example.com</td>
+                            <td>Standard User</td>
+                            <td>
+                                <button class="edit-btn">Edit</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                        <!-- Add more rows as needed -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

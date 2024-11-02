@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotels Management</title>
+    <link rel="stylesheet" href="admin-style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2 class="sidebar-logo">Admin Dashboard</h2>
+            <ul class="sidebar-menu">
+                <li><a href="admin-dashboard.html" class="nav-link">Users Management</a></li>
+                <li><a href="hotels-management.html" class="nav-link active">Hotels Management</a></li>
+                <li><a href="statistics.html" class="nav-link">Statistics</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <section class="section active">
+                <h3>Hotels Management</h3>
+               
+                
+                <div class="search-bar">
+                    <input type="text" placeholder="Search by hotel name or ID">
+                    <button class="search-button">Search</button>
+                </div>
+                
+
+                <!-- Hotels Table -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Hotel ID</th>
+                            <th>Hotel Name</th>
+                            <th>Location</th>
+                            <th>Rating</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Ocean View</td>
+                            <td>Paris, France</td>
+                            <td>5 Stars</td>
+                            <td>
+                                <button class="edit-btn">Edit</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Mountain Retreat</td>
+                            <td>Zurich, Switzerland</td>
+                            <td>4 Stars</td>
+                            <td>
+                                <button class="edit-btn">Edit</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
