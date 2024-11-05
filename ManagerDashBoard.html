@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hotel Manager Dashboard</title>
+        <link rel="stylesheet" href="styleMG.css">
+    </head>
+    <body>
+        <div class="dashboard-container">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <h2 class="sidebar-logo">Manager Dashboard</h2>
+                <ul class="sidebar-menu">
+                    <li><a href="#account-info" class="nav-link active">Account
+                            Info</a></li>
+                    <li><a href="ManagersHotels.html" class="nav-link">Hotels</a></li>
+                    <li><a href="ManagersReservations.html"
+                            class="nav-link">Reservations</a></li>
+                </ul>
+            </aside>
+            <main class="main-content">
+                <section id="account-info" class="section active">
+                    <h3>Account Information</h3>
+                    <div class="profile-picture">
+                        <img src="profile.jpg" alt="Profile Picture">
+                        <button>Upload New Picture</button>
+                    </div>
+
+                    <div class="personal-info">
+                        <h4>Personal Information</h4>
+                        <label>Full Name</label>
+                        <input type="text" value="John Doe">
+
+                        <label>Email Address</label>
+                        <input type="email" value="john.doe@example.com">
+
+                        <label>Date of Birth</label>
+                        <input type="text" value="January 1, 1990" disabled>
+                    </div>
+
+                    <div class="security-settings">
+                        <h4>Security Settings</h4>
+                        <button>Change Password</button>
+
+                    </div>
+
+                    <div class="notification-settings">
+                        <h4>Contact Preferences</h4>
+                        <label>Email Notifications</label>
+                        <input type="checkbox" checked>
+
+                        <label>SMS Notifications</label>
+                        <input type="checkbox">
+                    </div>
+
+                    <!-- Address Information -->
+                    <div class="address-info">
+                        <h4>Address Information</h4>
+                        <label>Primary Address</label>
+                        <input type="text" value="123 Main St, City, Country">
+                    </div>
+
+                    <!-- Delete Account -->
+                    <div class="account-actions">
+                        <button class="delete-account">Deactivate
+                            Account</button>
+                        <button class="delete-account">Delete Account</button>
+                        <a href="Home.html"><button class="logout">Logout</button></a>
+                    </div>
+                </section>
+            </main> <!-- End of main content -->
+        </div> <!-- End of container -->
+    </body>
+</html>

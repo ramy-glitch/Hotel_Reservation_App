@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hotel Manager Dashboard</title>
+        <link rel="stylesheet" href="styleMG.css">
+    </head>
+    <body>
+        <div class="dashboard-container">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <h2 class="sidebar-logo">Manager Dashboard</h2>
+                <ul class="sidebar-menu">
+                    <li><a href="ManagerDashBoard.html" class="nav-link">Account
+                            Info</a></li>
+                    <li><a href="ManagersHotels.html" class="nav-link">Hotels</a></li>
+                    <li><a href="#reservations"
+                            class="nav-link active">Reservations</a></li>
+                </ul>
+            </aside>
+
+            <main class="main-content">
+
+                <section id="reservations" class="section active">
+                    <h3>Recent Reservations</h3>
+                    <div class="search-create">
+                        <input type="text" placeholder="Search reservation...">
+                        <button class="btn-create">Create New Hotel</button>
+                    </div>
+                    <table class="responsive-table">
+                        <thead>
+                            <tr>
+                                <th>Reservation ID</th>
+                                <th>Check in</th>
+                                <th>Check out</th>
+                                <th>Customer ID</th>
+                                <th>Room</th>
+                                <th>Nbr adults</th>
+                                <th>Nbr childen</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#001</td>
+                                <td>27/7/2025</td>
+                                <td>30/7/2025</td>
+                                <td>#0012</td>
+                                <td>404</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>
+                                    <button class="btn-edit">Edit</button>
+                                    <button class="btn-delete">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </main>
+        </div>
+    </body>
+</html>

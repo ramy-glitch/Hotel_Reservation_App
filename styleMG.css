@@ -73,14 +73,14 @@ body {
 
 .section.active {
     display: block;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
 .section h3 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     border-bottom: 2px solid #00aaff;
     padding-bottom: 5px;
 }
@@ -154,9 +154,7 @@ input[type="password"] {
 button {
     background-color: #00aaff;
     color: #ffffff;
-
     padding: 10px 10px;
-
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -173,6 +171,14 @@ button:hover {
 }
 
 .delete-account:hover {
+    background-color: #ff1c1c;
+}
+
+.logout {
+    background-color: #ff4c4c;
+}
+
+.logout:hover {
     background-color: #ff1c1c;
 }
 
@@ -402,7 +408,6 @@ button:hover {
 }
 
 form {
-
     display: flex ;
     flex-direction: column;
     justify-content: center;
@@ -419,7 +424,6 @@ form input,label{
     max-width: 500px;
     min-width: 330px;
 }
-
 
 
 label {
@@ -534,7 +538,7 @@ input, select {
     }
 
     /* Réduire la taille des boutons et ajuster les éléments de formulaire */
-    .filter-bar, .hotel-info, .user-reviews, .add-review-form, form {
+    .hotel-info, .user-reviews, .add-review-form, form {
         width: 100%;
     }
 
@@ -578,7 +582,7 @@ input, select {
         align-items: flex-start;
     }
 
-    .reservation-info, .notification-item, .filter-bar {
+    .reservation-info, .notification-item {
         width: 100%;
     }
 
@@ -765,13 +769,11 @@ header .login-btn, .register-btn {
 footer {
     background-color: #1d3557;
     color: white;
-
     padding: 30px;
     margin-top:10px;
     display: flex;
     justify-content: space-between;
     align-items:baseline;
-
     flex-wrap: wrap;
 }
 
@@ -794,6 +796,112 @@ footer a {
     display: block;
     margin-bottom: 5px;
     font-size: 0.9em;
-
 }
 
+.filter-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.filter {
+    padding: 8px ;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    flex: 1;
+}
+.search-bar{
+    margin-bottom: 0px;
+    justify-content: center;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    flex: 1;
+}
+
+.filter-button {
+    background-color: #00aaff;
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filter-button:hover {
+    background-color: #008ecc;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Table Styles */
+.responsive-table {
+    width: 100%;
+    margin-top:5%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow:scroll;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display:table-column-group block;
+}
+
+.responsive-table th, .responsive-table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.responsive-table th {
+    background-color: #f4f6f8;
+    color: #333333;
+    font-weight: bold;
+}
+
+.responsive-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.responsive-table td {
+    color: #555555;
+}
+
+.responsive-table .btn-edit {
+    background-color: #28a745;
+    color: #ffffff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.responsive-table .btn-edit:hover {
+    background-color: #218838;
+}
+
+.responsive-table .btn-delete {
+    background-color: #dc3545;
+    color: #ffffff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.responsive-table .btn-delete:hover {
+    background-color: #c82333;
+}
