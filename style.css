@@ -154,7 +154,9 @@ input[type="password"] {
 button {
     background-color: #00aaff;
     color: #ffffff;
+
     padding: 10px 10px;
+
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -400,6 +402,7 @@ button:hover {
 }
 
 form {
+
     display: flex ;
     flex-direction: column;
     justify-content: center;
@@ -416,6 +419,7 @@ form input,label{
     max-width: 500px;
     min-width: 330px;
 }
+
 
 
 label {
@@ -761,11 +765,13 @@ header .login-btn, .register-btn {
 footer {
     background-color: #1d3557;
     color: white;
+
     padding: 30px;
     margin-top:10px;
     display: flex;
     justify-content: space-between;
     align-items:baseline;
+
     flex-wrap: wrap;
 }
 
@@ -788,4 +794,6 @@ footer a {
     display: block;
     margin-bottom: 5px;
     font-size: 0.9em;
+
 }
+
