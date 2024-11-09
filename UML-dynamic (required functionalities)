@@ -1,0 +1,125 @@
+
+
+ **Admin**
+Handles administrative tasks related to managing accounts and overseeing system data, excluding user account creation.
+
+- logIn()**: Authenticates the admin.
+- logOut()**:
+- updateUserAccount(userId, updatedData)**: Updates a user's account details.
+- deleteUserAccount(userId)**: Deletes a user's account.
+- createHotelManagerAccount(managerData)**: Creates a new hotel manager account.
+- updateHotelManagerAccount(managerId, updatedData)**: Updates details of a hotel manager account.
+- deleteHotelManagerAccount(managerId)**: Deletes a hotel manager account.
+- assignManagerToHotel(managerId, hotelId)**: Assigns a hotel manager to a specific hotel.
+- viewStatistics()**: Provides an overview of system data for maintenance and security (e.g., user activity, bookings, hotel performance).
+
+---
+
+ **HotelManager**
+Manages hotel and room details, as well as reservations for hotels under their management.
+
+- logIn()**: Authenticates the hotel manager.
+- logOut()**:
+- addRoom(roomData)**: Adds a new room to a hotel managed by this hotel manager.
+- updateRoom(roomId, updatedData)**: Updates the details of an existing room.
+- deleteRoom(roomId)**: Deletes a room from the hotel.
+- viewReservations()**: Retrieves and displays all reservations for the hotels managed by this hotel manager.
+- updateHotelDetails(hotelId, updatedData)**: Updates information for the hotel(s) managed by this manager.
+
+---
+
+**Customer (User)**
+Handles user actions such as registration, hotel search and filtering, reservations, notifications, reviews, and viewing reservation history.
+
+- register(userData)**: Registers a new user account.
+- logIn()**: Authenticates the user.
+- logOut()**:
+- searchHotels(criteria)**: Searches for hotels based on specified criteria (e.g., location, budget, availability).
+- filterHotels(filters)**: Applies filters to refine hotel search results.
+- viewHotelDetails(hotelId)**: Retrieves and displays detailed information about a hotel.
+- makeReservation(reservationData)**: Makes a reservation for a hotel.
+- receiveNotification(notificationData)**: Receives notifications related to reservations.
+- leaveReview(hotelId, rating, comment)**: Allows the user to submit a review for a specific hotel.
+- viewReservationHistory()**: Retrieves and displays the user's past reservations.
+
+---
+
+### **Hotel**
+Represents a hotel and stores related details. Manages relationships with rooms, services, photos, and reviews.
+
+- getHotelDetails()**: Returns detailed information about the hotel.
+- getRooms()**: Retrieves all rooms associated with the hotel.
+- getServices()**: Retrieves available services offered by the hotel.
+- getReviews()**: Retrieves all customer reviews for the hotel.
+- addPhoto(photoData)**: Adds a new photo to the hotel's photo gallery.
+
+---
+
+ **Room**
+Manages individual room details, including availability and pricing.
+
+- getRoomDetails()**: Returns detailed information about the room.
+- updateAvailability(status)**: Updates the availability status of the room.
+- getPhotos()**: Retrieves all photos associated with the room.
+- setPricing(adultPrice, childPrice)**: Sets pricing for adults and children for the room.
+
+---
+
+**Service**
+Represents a service offered by a hotel and manages its availability and pricing.
+
+- getServiceDetails()**: Returns detailed information about the service.
+- updateAvailability(status)**: Updates the availability status of the service.
+- setCost(cost)**: Sets the cost of the service.
+
+---
+
+ **Review**
+Manages customer reviews for hotels.
+
+- createReview(customerId, hotelId, rating, comment)**: Creates a new review for a specific hotel.
+- getReviewsByHotel(hotelId)**: Retrieves all reviews for a specific hotel.
+
+---
+
+ **Notification**
+Handles notifications sent to customers.
+
+- createNotification(customerId, message)**: Creates a new notification for a customer.
+- getNotifications(customerId)**: Retrieves all notifications for a customer.
+
+---
+
+ **Reservation**
+Manages reservation details, such as dates, guest numbers, and reservation status.
+
+- createReservation(reservationData)**: Creates a new reservation for a hotel.
+- cancelReservation(reservationId)**: Cancels an existing reservation.
+- updateReservation(reservationId, updatedData)**: Updates reservation details (e.g., dates, guest numbers).
+- getReservationDetails(reservationId)**: Retrieves details for a specific reservation.
+
+---
+
+ **ReservationRoom**
+Handles the relationship between reservations and rooms, storing room-specific details for each reservation.
+
+- addRoomToReservation(reservationId, roomId, roomPrice)**: Adds a room to a reservation.
+- removeRoomFromReservation(reservationId, roomId)**: Removes a room from a reservation.
+
+---
+
+ **HotelPhoto**
+Manages photos associated with hotels.
+
+- addPhoto(photoData)**: Adds a new photo to the hotel's gallery.
+- getPhotos(hotelId)**: Retrieves all photos for a specific hotel.
+
+---
+
+ **RoomPhoto**
+Manages photos associated with rooms.
+
+- addPhoto(photoData)**: Adds a new photo to the room's gallery.
+- getPhotos(roomId)**: Retrieves all photos for a specific room.
+
+---
