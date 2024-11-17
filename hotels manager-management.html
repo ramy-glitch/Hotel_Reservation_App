@@ -13,7 +13,7 @@
             <h2 class="sidebar-logo">Admin Dashboard</h2>
             <ul class="sidebar-menu">
                 <li><a href="admin-dashboard.html" class="nav-link">Users Management</a></li>
-                <li><a href="hotels manager-management.html" class="nav-link active">Hotel Manager Management</a></li>
+                <li><a href="hotels-manager-management.html" class="nav-link active">Hotel Manager Management</a></li>
                 <li><a href="statistics.html" class="nav-link">Statistics</a></li>
             </ul>
         </aside>
@@ -22,7 +22,6 @@
         <main class="main-content">
             <section class="section active">
                 <h3>Hotel Manager Management</h3>
-                <p>Manage hotel managers here. Add, update, or remove manager information.</p>
                 
                 <!-- Search Bar -->
                 <div class="search-container">
@@ -48,8 +47,12 @@
                             <td>jane.doe@example.com</td>
                             <td>Ocean View</td>
                             <td>
-                                <button class="edit-btn">Edit</button>
-                                <button class="delete-btn">Delete</button>
+                                <a href="edit-manager.html">
+                                    <button class="edit-btn">Edit</button>
+                                </a>
+                                <a href="delete-manager.html">
+                                    <button class="delete-btn">Delete</button>
+                                </a>
                             </td>
                         </tr>
                         <tr>
@@ -58,8 +61,12 @@
                             <td>john.smith@example.com</td>
                             <td>Mountain Retreat</td>
                             <td>
-                                <button class="edit-btn">Edit</button>
-                                <button class="delete-btn">Delete</button>
+                                <a href="edit-manager.html">
+                                    <button class="edit-btn">Edit</button>
+                                </a>
+                                <a href="delete-manager.html">
+                                    <button class="delete-btn">Delete</button>
+                                </a>
                             </td>
                         </tr>
                     </tbody>
