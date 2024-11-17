@@ -243,3 +243,62 @@ button {
 .search-bar .search-button:hover {
     background-color: #008ecc;
 }
+/* Search Bar Styling */
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.search-button {
+    background-color: #00aaff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: 10px;
+    transition: background-color 0.3s;
+}
+
+.search-button:hover {
+    background-color: #008ecc;
+}
+/* Boutons Edit */
+.edit-btn {
+    background-color: #4CAF50; 
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.edit-btn:hover {
+    background-color: #45a049; 
+}
+
+/* Boutons Delete */
+.delete-btn {
+    background-color: #f44336; 
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f; 
+}
