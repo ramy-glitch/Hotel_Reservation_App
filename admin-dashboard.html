@@ -13,25 +13,22 @@
             <h2 class="sidebar-logo">Admin Dashboard</h2>
             <ul class="sidebar-menu">
                 <li><a href="#user-management" class="nav-link active">Users Management</a></li>
-                <li><a href="hotels manager-management.html" class="nav-link">Hotels manager   Management</a></li>
+                <li><a href="hotels manager-management.html" class="nav-link">Hotels Manager Management</a></li>
                 <li><a href="statistics.html" class="nav-link">Statistics</a></li>
             </ul>
         </aside>
 
-      
         <main class="main-content">
-            
             <section id="user-management" class="section active">
                 <h3>Users Management</h3>
                 
-                
-                
-                <table>
+                <table border="1" cellpadding="10" cellspacing="0">
                     <thead>
                         <tr>
                             <th>User ID</th>
                             <th>Username</th>
                             <th>Email</th>
+                            <th>Role</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -42,11 +39,32 @@
                             <td>johndoe@example.com</td>
                             <td>Standard User</td>
                             <td>
-                                <button class="edit-btn">Edit</button>
-                                <button class="delete-btn">Delete</button>
+                                <!-- Edit Button Links to edit-user.html -->
+                                <a href="edit-user.html">
+                                    <button class="edit-btn">Edit</button>
+                                </a>
+                                <!-- Delete Button Links to delete-user.html -->
+                                <a href="delete-user.html">
+                                    <button class="delete-btn">Delete</button>
+                                </a>
                             </td>
                         </tr>
-                        
+                        <tr>
+                            <td>2</td>
+                            <td>JaneSmith</td>
+                            <td>janesmith@example.com</td>
+                            <td>Admin User</td>
+                            <td>
+                                <!-- Edit Button Links to edit-user.html -->
+                                <a href="edit-user.html">
+                                    <button class="edit-btn">Edit</button>
+                                </a>
+                                <!-- Delete Button Links to delete-user.html -->
+                                <a href="delete-user.html">
+                                    <button class="delete-btn">Delete</button>
+                                </a>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
             </section>
