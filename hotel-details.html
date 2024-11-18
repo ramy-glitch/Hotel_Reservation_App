@@ -11,7 +11,7 @@
         <aside class="sidebar">
             <h2 class="sidebar-logo">Dashboard</h2>
             <ul class="sidebar-menu">
-                <li><a href="user dashbored.html" class="nav-link">Account Info</a></li>
+                <li><a href="admin-dashboard.html" class="nav-link">Account Info</a></li>
                 <li><a href="hotel.html" class="nav-link">Hotels</a></li>
                 <li><a href="reservation-history.html" class="nav-link">Reservations History</a></li>
                 <li><a href="notification.html" class="nav-link">Notifications</a></li>
@@ -20,75 +20,48 @@
 
         <main class="main-content">
             <section id="hotel-details" class="section active">
-                <h3>Hotel Name - City, Country</h3>
+                <h3>Four Points by Sheraton - Oran, Algeria</h3>
+                <p class="address">
+                    Boulevard du 19 Mars, Route des falaises, 31000 Oran, Algeria
+                </p>
 
+                <!-- Image Gallery -->
                 <div class="hotel-gallery">
-                    <img src="hotel1.jpg" alt="Hotel Image" class="main-image">
+                    <img src="hotel_main.jpg" alt="Hotel Main Image" class="main-image">
                     <div class="thumbnail-gallery">
-                        <img src="hotel2.jpg" alt="Hotel Image Thumbnail">
-                        <img src="hotel3.jpg" alt="Hotel Image Thumbnail">
-                        <img src="hotel4.jpg" alt="Hotel Image Thumbnail">
+                        <img src="hotel1.jpg" alt="Hotel Thumbnail">
+                        <img src="hotel2.jpg" alt="Hotel Thumbnail">
+                        <img src="hotel3.jpg" alt="Hotel Thumbnail">
+                        <img src="hotel4.jpg" alt="Hotel Thumbnail">
                     </div>
                 </div>
 
+                <!-- Hotel Details -->
                 <div class="hotel-info">
+                    <div class="summary">
+                        <span class="rating">Pleasant 6.4</span>
+                        <span class="location-rating">Great location! 8.3</span>
+                    </div>
+
                     <h4>Description</h4>
-                    <p>Ocean View Resort offers stunning views of the ocean, top-notch amenities, and luxurious rooms to make your stay unforgettable.</p>
+                    <p>Enjoy stunning ocean views and modern amenities for an unforgettable stay at Ocean View Resort.</p>
                     
                     <h4>Services</h4>
-                    <ul>
-                        <li>Free WiFi</li>
-                        <li>Swimming Pool</li>
-                        <li>Spa and Wellness Center</li>
-                        <li>Room Service</li>
-                        <li>Airport Shuttle</li>
-                    </ul>
+                    <div class="services">
+                        <span>Breakfast</span>
+                        <span>2 Restaurants</span>
+                        <span>Private Bathroom</span>
+                        <span>Ocean View</span>
+                        <span>Free Wi-Fi</span>
+                        <span>Airport Shuttle (free)</span>
+                        <span>Air Conditioning</span>
+                        <span>Non-Smoking Rooms</span>
+                    </div>
 
                     <h4>Price</h4>
                     <p>$200 per night</p>
 
                     <a href="booking.html" class="book-now-button">Book Now</a>
-                </div>
-
-                <!-- Section des avis des utilisateurs -->
-                <div class="user-reviews">
-                    <h4>User Reviews</h4>
-
-                    <!-- Exemple d'avis d'utilisateur -->
-                    <div class="review">
-                        <p><strong>John Doe</strong> - <em>March 15, 2024</em></p>
-                        <p>“Amazing stay! The view was incredible, and the staff was very friendly. Highly recommended!”</p>
-                        <p>Rating: ⭐⭐⭐⭐⭐</p>
-                    </div>
-
-                    <div class="review">
-                        <p><strong>Jane Smith</strong> - <em>April 10, 2024</em></p>
-                        <p>“The room was clean and the amenities were great. However, the WiFi was a bit slow.”</p>
-                        <p>Rating: ⭐⭐⭐⭐</p>
-                    </div>
-
-                    <!-- Ajouter un avis -->
-                    <form class="add-review-form">
-                        <h5>Add Your Review</h5>
-                       
-
-                        <label for="review-date">Date:</label>
-                        <input type="date" id="review-date" name="review-date" required>
-
-                        <label for="review-text">Your Review:</label>
-                        <textarea id="review-text" name="review-text" rows="4" required></textarea>
-
-                        <label for="review-rating">Rating:</label>
-                        <select id="review-rating" name="review-rating" required>
-                            <option value="5">⭐⭐⭐⭐⭐</option>
-                            <option value="4">⭐⭐⭐⭐</option>
-                            <option value="3">⭐⭐⭐</option>
-                            <option value="2">⭐⭐</option>
-                            <option value="1">⭐</option>
-                        </select>
-
-                        <button type="submit" class="submit-review-button">Submit Review</button>
-                    </form>
                 </div>
             </section>
         </main>
