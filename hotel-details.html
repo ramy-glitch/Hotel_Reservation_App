@@ -63,6 +63,40 @@
 
                     <a href="booking.html" class="book-now-button">Book Now</a>
                 </div>
+
+                <!-- User Reviews Section -->
+                <div class="reviews-section">
+                    <h4>Reviews</h4>
+
+                    <!-- Display Existing Reviews -->
+                    <div class="existing-reviews">
+                        <p><strong>John Doe:</strong> Amazing hotel! The view is breathtaking. Highly recommend. ⭐⭐⭐⭐</p>
+                        <p><strong>Jane Smith:</strong> Great location, but the room service could be better. ⭐⭐⭐</p>
+                    </div>
+
+                    <!-- Add New Review -->
+                    <div class="add-review">
+                        <h5>Leave a Review</h5>
+                        <form action="submit-review.php" method="POST">
+                            <!-- Comment input -->
+                            <label for="comment">Your Comment:</label>
+                            <textarea id="comment" name="comment" rows="4" placeholder="Write your review here..." required></textarea>
+
+                            <!-- Rating -->
+                            <label for="rating">Your Rating:</label>
+                            <select id="rating" name="rating" required>
+                                <option value="5">⭐⭐⭐⭐⭐ - Excellent</option>
+                                <option value="4">⭐⭐⭐⭐ - Good</option>
+                                <option value="3">⭐⭐⭐ - Average</option>
+                                <option value="2">⭐⭐ - Poor</option>
+                                <option value="1">⭐ - Terrible</option>
+                            </select>
+
+                            <!-- Submit button -->
+                            <button type="submit" class="submit-review-button">Submit Review</button>
+                        </form>
+                    </div>
+                </div>
             </section>
         </main>
     </div>
