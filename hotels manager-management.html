@@ -13,7 +13,7 @@
             <h2 class="sidebar-logo">Admin Dashboard</h2>
             <ul class="sidebar-menu">
                 <li><a href="admin-dashboard.html" class="nav-link">Users Management</a></li>
-                <li><a href="hotels-manager-management.html" class="nav-link active">Hotel Manager Management</a></li>
+                <li><a href="hotels manager-management.html" class="nav-link active">Hotel Manager Management</a></li>
                 <li><a href="statistics.html" class="nav-link">Statistics</a></li>
             </ul>
         </aside>
@@ -27,6 +27,7 @@
                 <div class="search-container">
                     <input type="text" placeholder="Search by manager name or ID" class="search-bar">
                     <button class="search-button">Search</button>
+                   <a href="Add Manager.html"><button class="add-manager-button">Add Manager</button></a> 
                 </div>
 
                 <!-- Managers Table -->
@@ -47,12 +48,14 @@
                             <td>jane.doe@example.com</td>
                             <td>Ocean View</td>
                             <td>
-                                <a href="edit-manager.html">
-                                    <button class="edit-btn">Edit</button>
-                                </a>
-                                <a href="delete-manager.html">
-                                    <button class="delete-btn">Delete</button>
-                                </a>
+                                <div class="action-buttons">
+                                    <a href="edit-manager.html">
+                                        <button class="edit-btn">Edit</button>
+                                    </a>
+                                    <a href="delete-manager.html">
+                                        <button class="delete-btn">Delete</button>
+                                    </a>
+                                </div>
                             </td>
                         </tr>
                         <tr>
@@ -61,13 +64,16 @@
                             <td>john.smith@example.com</td>
                             <td>Mountain Retreat</td>
                             <td>
-                                <a href="edit-manager.html">
-                                    <button class="edit-btn">Edit</button>
-                                </a>
-                                <a href="delete-manager.html">
-                                    <button class="delete-btn">Delete</button>
-                                </a>
+                                <div class="action-buttons">
+                                    <a href="edit-manager.html">
+                                        <button class="edit-btn">Edit</button>
+                                    </a>
+                                    <a href="delete-manager.html">
+                                        <button class="delete-btn">Delete</button>
+                                    </a>
+                                </div>
                             </td>
+                            
                         </tr>
                     </tbody>
                 </table>
