@@ -478,16 +478,15 @@ button:hover {
 }
 /* Hotel Title Styling */
 .hotel-title {
-    font-size: 2rem; 
-    color: #fff; 
-    font-weight: 700; 
-    text-align: center; 
-    margin: 20px 0; 
-    background-color: #007acc; 
-    padding: 10px 20px; 
-    border-radius: 5px; 
+    font-size: 2rem; /* Size of the title */
+    color: #333; /* Dark color for text */
+    font-weight: 700; /* Bold weight for emphasis */
+    text-align: left; /* Align left */
+    margin: 20px 0; /* Margin for spacing */
+    background-color: transparent !important; /* Ensure no background */
+    border-bottom: 2px solid #007acc; /* Optional: add a bottom border for emphasis */
+    padding-bottom: 5px; /* Space below the text */
 }
-
 
 
 
@@ -823,66 +822,25 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom: none; 
     text-decoration: none; 
 }
-
-.reviews-section {
-    margin-top: 30px;
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+.valid {
+    color: green;
 }
 
-.reviews-section h4 {
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 20px;
-    padding-bottom: 5px;
+.invalid {
+    color: red;
 }
 
-
-.existing-reviews p {
-    margin: 10px 0;
-    font-size: 1rem;
-    color: #555;
+.password-conditions {
+    list-style-type: none;
+    padding: 0;
 }
 
-.add-review h5 {
-    font-size: 1.2rem;
-    color: #444;
-    margin-bottom: 15px;
+.password-conditions li {
+    color: red;
 }
 
-.add-review form label {
-    display: block;
-    font-weight: bold;
-    margin-top: 10px;
-    margin-bottom: 5px;
-}
-
-.add-review form input,
-.add-review form textarea,
-.add-review form select {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 1rem;
-}
-
-.add-review form button {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.add-review form button:hover {
-    background-color: #0056b3;
+.password-conditions .valid {
+    color: green;
 }
 
 
