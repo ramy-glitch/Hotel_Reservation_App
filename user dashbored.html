@@ -33,6 +33,7 @@
 
                         <label for="email">Email Address</label>
                         <input type="email" id="email" name="email" value="john.doe@example.com" required>
+                        <span id="emailMessage"></span>
 
                         <label for="dob">Date of Birth</label>
                         <input type="text" id="dob" value="January 1, 1990" disabled>
@@ -49,15 +50,27 @@
                         <input type="password" id="current-password" name="current-password" placeholder="Enter current password" required>
 
                         <label for="new-password">New Password</label>
-                        <input type="password" id="new-password" name="new-password" placeholder="Enter new password" required>
+                        <input type="password" id="password" name="new-password" placeholder="Enter new password" required>
 
                         <label for="confirm-password">Confirm New Password</label>
-                        <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm new password" required>
-
+                        <input type="password" id="repassword" name="confirm-password" placeholder="Confirm new password" required>
+                        
+                        
+                       
+                        <span id="passwordMessage"></span>
+            
+            
+                                <ul class="password-conditions">
+                                    <li id="length" class="invalid">Au moins 8 caractères</li>
+                                    <li id="uppercase" class="invalid">Au moins une majuscule</li>
+                                    <li id="lowercase" class="invalid">Au moins une minuscule</li>
+                                    <li id="number" class="invalid">Au moins un chiffre</li>
+                                    <li id="match" class="invalid">Les mots de passe doivent correspondre</li>
+                                </ul>       
                         <button type="submit" class="update-button">Change Password</button>
                     </form>
                 </div>
-
+                <script src="script.js"></script>
                 <!-- Delete Account -->
                 <div class="account-actions">
                     <button class="delete-account">Delete Account</button>
