@@ -16,20 +16,35 @@
 
         <main class="main content">
             <div class="div">
-                <form class ="signUpForm"id="login-form">
+                <form class ="signUpForm"id="login-form"action="#" method="POST">
                     <label for ="id">Pseudo :</label>
                     <input type="text" id="username" name="username" required>
+                    <label for="date-naissance">Date de naissance</label>
+                    <input type="date" id="date-naissance" name="date_naissance" required>
+        
                     <label for="email">E-mail :</label>
                     <input type="email" id="email" name="email" required>
-                    <label for="password">Password :</label>
-                    <input type="password" id="password" name="password"
-                        required>
-                    <label for="email" >Password validation :</label>
-                    <input type="password" id="email_validation" name="email_validation" required>
-                    <button type="submit">create account</button>
+                    <span id="emailMessage"></span>
+
+                    <label for="password">Mot de passe</label>
+            <input type="password" id="password" name="password" placeholder="Entrez votre mot de passe" required>
+            <label for="repassword">Confirmez votre mot de passe</label>
+            <input type="password" id="repassword" name="repassword" placeholder="Confirmez votre mot de passe" required>
+            <span id="passwordMessage"></span>
+
+
+                    <ul class="password-conditions">
+                        <li id="length" class="invalid">Au moins 8 caractères</li>
+                        <li id="uppercase" class="invalid">Au moins une majuscule</li>
+                        <li id="lowercase" class="invalid">Au moins une minuscule</li>
+                        <li id="number" class="invalid">Au moins un chiffre</li>
+                        <li id="match" class="invalid">Les mots de passe doivent correspondre</li>
+                    </ul>
+        <button type="submit">create account</button>
                 </form>
                 <p>Already registered? <a href="Login.html">Login here</a></p>
             </div>
+              <script src="script.js"></script>
         </main>
 
         <footer>
@@ -49,5 +64,6 @@
                 <p>Address: 123 Main St, City, Country</p>
             </div>
         </footer>
+      
     </body>
 </html>
