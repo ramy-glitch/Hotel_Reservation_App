@@ -721,11 +721,7 @@ header .login-btn, .register-btn {
     border-radius: 5px;
 }
 
-.search-bar button {
-    background-color: #457b9d;
-    color: white;
-    border: none;
-}
+
 
 /* Featured Hotels Section */
 .featured-hotels {
@@ -814,13 +810,13 @@ footer a {
 }
 .search-bar{
     margin-bottom: 0px;
+    display:flex;
     justify-content: center;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    padding: 0px;
     font-size: 1rem;
     flex: 1;
 }
+
 
 .filter-button {
     background-color: #00aaff;
@@ -830,6 +826,26 @@ footer a {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+}
+.search-input{
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    flex: 1;
+}
+.search-button{
+    background-color: #00aaff;
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.search-button:hover {
+background-color:  #008ecc;
+transition: background-color 0.3s;
 }
 
 .filter-button:hover {
@@ -904,4 +920,79 @@ footer a {
 
 .responsive-table .btn-delete:hover {
     background-color: #c82333;
+}
+
+.filter-bar, .search-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; 
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .filter-bar, .search-bar {
+        flex-direction: column; 
+        align-items: stretch; 
+    }
+
+    .search-input, .filter-select, .filter-button, .search-button {
+        width: 100%; 
+        margin-bottom: 10px; 
+    }
+
+    .filter-group {
+        width: 100%;
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+/* Dialog box styling */
+.confirmation-dialog {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px;
+}
+
+.confirmation-dialog h3 {
+    margin-bottom: 15px;
+}
+
+.dialog-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.dialog-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-confirm {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.btn-cancel {
+    background-color: #dc3545;
+    color: #fff;
 }

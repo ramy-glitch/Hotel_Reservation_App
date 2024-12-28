@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Hotel</title>
+    <link rel="stylesheet" href="styleMG.css">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <h2 class="sidebar-logo">Manager Dashboard</h2>
+            <ul class="sidebar-menu">
+                <li><a href="ManagerDashBoard.html" class="nav-link">Account Info</a></li>
+                <li><a href="ManagersHotels.html" class="nav-link">Hotels</a></li>
+                <li><a href="ManagersReservations.html" class="nav-link active">Reservations</a></li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <section id="reservation" class="section active">
+                <h3>Edit Reservation</h3>
+                <br>
+                <form action="ManagersReservations.html" id="reservationForm">
+                    <label for="reservation-id">Reservation ID:</label>
+                    <input type="text" id="reservation-id" name="reservation-id" placeholder="Enter Reservation ID" >
+                    <!-- this field is optionnal, advice the user on dialog-->
+        
+                    <label for="check-in">Check In:</label>
+                    <input type="date" id="check-in" name="check-in" required>
+                    <label for="check-out">Check Out:</label>
+                    <input type="date" id="check-out" name="check-out" required>
+                    <label for="customer-id">Customer ID:</label>
+                    <input type="text" id="customer-id" name="customer-id" placeholder="Enter Customer ID">
+                    <!-- this field is optionnal, advice the user on dialog-->
+        
+                    <label for="room">Room:</label>
+                    <input type="number" id="room" name="room" placeholder="Enter Room Number" required>
+                    <label for="nbr-adults">Number of Adults:</label>
+                    <input type="number" id="nbr-adults" name="nbr-adults" placeholder="Enter Number of Adults" required>
+                    <label for="nbr-children">Number of Children:</label>
+                    <input type="number" id="nbr-children" name="nbr-children" placeholder="Enter Number of Children" required>
+                    <button type="submit" >Confirm</button>
+                </form>
+            
+
+            <h3>Preview</h3> <!-- exemple of the overlay view after click on Confirm-->
+            <table class="responsive-table">
+                <thead>
+                    <tr>
+                        <th>Reservation ID</th>
+                        <th>Check in</th>
+                        <th>Check out</th>
+                        <th>Customer ID</th>
+                        <th>Room</th>
+                        <th>Nbr adults</th>
+                        <th>Nbr childen</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#001</td>
+                        <td>27/7/2025</td>
+                        <td>30/7/2025</td>
+                        <td>#0012</td>
+                        <td>404</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td> 
+                            <button class="btn-delete" onclick="showConfirmation()">Delete</button>
+                            <!-- im not suposed to do this but here is an exemple of the overlay view-->
+                            <div class="overlay" id="confirmationOverlay">
+                                <div class="confirmation-dialog">
+                                    <h3>Are you sure?</h3>
+                                    <p>Do you really want to delete this item?</p>
+                                    <div class="dialog-buttons">
+                                        <button class="btn-confirm" onclick="confirmAction()">Yes</button>
+                                        <button class="btn-cancel" onclick="closeConfirmation()">No</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+
+
+
+            </section>
+        </main>
+    </div>
+</body>
+<script>
+    // Show the confirmation dialog
+    function showConfirmation() {
+        document.getElementById('confirmationOverlay').style.display = 'flex';
+    }
+
+    // Hide the confirmation dialog
+    function closeConfirmation() {
+        document.getElementById('confirmationOverlay').style.display = 'none';
+    }
+
+    // Perform the confirmed action
+    function confirmAction() {
+        alert('Item deleted successfully!');
+        closeConfirmation();
+    }
+</script>
+
+</html>

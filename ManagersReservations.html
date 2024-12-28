@@ -26,7 +26,7 @@
                     <h3>Recent Reservations</h3>
                     <div class="search-create">
                         <input type="text" placeholder="Search reservation...">
-                        <button class="btn-create">Create New Hotel</button>
+                        <button class="btn-create">Search</button>
                     </div>
                     <table class="responsive-table">
                         <thead>
@@ -34,7 +34,7 @@
                                 <th>Reservation ID</th>
                                 <th>Check in</th>
                                 <th>Check out</th>
-                                <th>Customer ID</th>
+                                <th>Customer Email</th>
                                 <th>Room</th>
                                 <th>Nbr adults</th>
                                 <th>Nbr childen</th>
@@ -46,13 +46,23 @@
                                 <td>#001</td>
                                 <td>27/7/2025</td>
                                 <td>30/7/2025</td>
-                                <td>#0012</td>
+                                <td>john.doe@user.com</td>
                                 <td>404</td>
                                 <td>2</td>
                                 <td>2</td>
                                 <td>
-                                    <button class="btn-edit">Edit</button>
-                                    <button class="btn-delete">Delete</button>
+                                    <!--<a href="ReservationForm.html"><button class="btn-edit">Edit</button></a>-->
+                                    <button class="btn-delete" onclick="showConfirmation()">Delete</button>
+                                    <div class="overlay" id="confirmationOverlay">
+                                        <div class="confirmation-dialog">
+                                            <h3>Are you sure?</h3>
+                                            <p>Do you really want to delete this item?</p>
+                                            <div class="dialog-buttons">
+                                                <button class="btn-confirm" onclick="confirmAction()">Yes</button>
+                                                <button class="btn-cancel" onclick="closeConfirmation()">No</button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </td>
                             </tr>
                         </tbody>
@@ -61,4 +71,21 @@
             </main>
         </div>
     </body>
+    <script>
+        // Show the confirmation dialog
+        function showConfirmation() {
+            document.getElementById('confirmationOverlay').style.display = 'flex';
+        }
+    
+        // Hide the confirmation dialog
+        function closeConfirmation() {
+            document.getElementById('confirmationOverlay').style.display = 'none';
+        }
+    
+        // Perform the confirmed action
+        function confirmAction() {
+            alert('Item deleted successfully!');
+            closeConfirmation();
+        }
+    </script>
 </html>
